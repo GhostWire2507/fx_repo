@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="bscsmy3s1.mokopanemakhetha.MainController"
+            stylesheets="@style.css"
+            fx:id="vehicleFormPane">
+
+    <VBox alignment="CENTER" spacing="15"
+          AnchorPane.topAnchor="20"
+          AnchorPane.leftAnchor="20"
+          AnchorPane.rightAnchor="20"
+          AnchorPane.bottomAnchor="20">
+
+        <!-- Title -->
+        <Label fx:id="lblVehicleFormTitle"
+               text="➕ Add New Vehicle"
+               styleClass="title"/>
+
+        <!-- Vehicle Form -->
+        <GridPane fx:id="gridVehicleForm" hgap="10" vgap="12" padding="10">
+            <columnConstraints>
+                <ColumnConstraints halignment="RIGHT" minWidth="120"/>
+                <ColumnConstraints minWidth="220"/>
+            </columnConstraints>
+
+            <Label fx:id="lblBrand" text="Brand:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtBrand" promptText="e.g. Toyota" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label fx:id="lblModel" text="Model:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtModel" promptText="e.g. Corolla" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label fx:id="lblYear" text="Year:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtYear" promptText="e.g. 2020" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label fx:id="lblType" text="Vehicle Type:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="cmbType" promptText="Select Type" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label fx:id="lblExtra" text="Extra Info:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="txtExtra" promptText="Doors / Capacity / Load" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Buttons -->
+        <HBox fx:id="hboxButtons" alignment="CENTER" spacing="12">
+            <Button fx:id="btnAddVehicle"
+                    text="Add Vehicle"
+                    onAction="#onAddVehicle"
+                    styleClass="button"/>
+
+            <Button fx:id="btnShowVehicles"
+                    text="Show All Vehicles"
+                    onAction="#onShowVehicles"
+                    styleClass="button"/>
+        </HBox>
+
+        <!-- Output -->
+        <TextArea fx:id="txtDisplay"
+                  promptText="Vehicle information will appear here..."
+                  prefHeight="180"
+                  prefWidth="350"
+                  wrapText="true"/>
+
+    </VBox>
+</AnchorPane>

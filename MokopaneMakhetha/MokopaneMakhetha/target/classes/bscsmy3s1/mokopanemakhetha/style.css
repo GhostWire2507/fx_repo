@@ -1,0 +1,31 @@
+.title {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1e90ff;
+}
+
+.text-field, .combo-box, .button {
+    -fx-font-size: 14px;
+}
+
+.button {
+    -fx-background-color: #1e90ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-padding: 8 16;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #4682b4;
+}
+
+.text-area {
+    -fx-background-color: #f8f8f8;
+    -fx-border-color: #1e90ff;
+    -fx-border-radius: 5;
+}
+
+.anchor-pane {
+    -fx-background-color: linear-gradient(to bottom, #ffffff, #e6f0ff);
+}
