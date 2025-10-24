@@ -12,14 +12,11 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        // Load the main FXML file (replace with your own view if needed)
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("main-view.fxml"));
+        // Load the vehicle form FXML file
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("vehicle-form.fxml"));
 
         // Create the main scene and set its dimensions
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
-
-        // Apply external CSS styling
-        scene.getStylesheets().add(HelloApplication.class.getResource("style.css").toExternalForm());
 
         // Set stage properties
         stage.setTitle("Vehicle Management System");
