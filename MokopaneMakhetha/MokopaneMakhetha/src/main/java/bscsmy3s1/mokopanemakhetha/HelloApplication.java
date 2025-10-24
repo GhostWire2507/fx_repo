@@ -19,7 +19,7 @@ public class HelloApplication extends Application {
         Scene scene = new Scene(fxmlLoader.load(), 800, 600);
 
         // Apply external CSS styling
-        scene.getStylesheets().add(HelloApplication.class.getResource("bscsmy3s1/mokopanemakhetha/style.css").toExternalForm());
+        scene.getStylesheets().add(HelloApplication.class.getResource("style.css").toExternalForm());
 
         // Set stage properties
         stage.setTitle("Vehicle Management System");
